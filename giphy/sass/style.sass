@@ -1,0 +1,116 @@
+@import 'preloader'
+@import 'fonts/fonts'
+@import 'animation'
+  
+// BASE
+body
+  font-family: 'NirmalaUI-Bold'
+  background-color: #191b1a
+  
+.container
+  width: 100%
+  max-width: 1140px
+  margin: 0 auto
+  padding: 0 15px
+
+button
+  border: none
+  outline: none
+
+// PAGE
+.section
+  text-align: center
+  padding: 60px 0 0
+  &-title
+    padding: 10px
+    display: inline-block
+    color: #fff
+    border: 3px solid transparent
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 700
+    animation: borderColor 1s infinite 
+    transition: border-color 0.3s
+
+.search
+  margin: 35px 0 15px
+  display: flex
+  justify-content: space-between
+  &-input
+    font-family: 'NirmalaUI-Bold'
+    margin-right: 10px
+    padding: 10px 15px
+    background: #ffd040
+    border: 1px solid #ffd040
+    border-radius: 5px
+    width: 75%
+    min-height: 50px
+    color: #fff
+    font-size: 21px
+    &::placeholder
+      color: rgba(255, 255, 255, .5)
+  &-button
+    font-family: 'NirmalaUI-Bold'
+    border-radius: 5px
+    min-height: 50px
+    width: 20%
+    color: #fff
+    font-size: 21px
+    font-weight: 700
+    text-transform: uppercase
+    background: rgb(117,115,217)
+    background: linear-gradient(45deg, #7573D9 0%, #514ED9 50%, #0B0974 100%)
+    background-position: 100% 0
+    background-size: 200% 200%
+    box-shadow: 0 16px 32px 0 rgba(0, 40, 120,.35)
+    transition: .5s
+    &:hover
+      box-shadow: 0 0 0 0 rgba(0, 40, 120, 0)
+      background-position: 0 0
+
+
+
+.giffs-wrap
+  column-count: 3
+  &__img
+    margin-bottom: 10px
+    position: relative
+    img
+      display: block
+      width: 100%
+    &:hover
+      .giffs-wrap__overlay
+        display: block
+  &__overlay
+    display: none
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .3)
+  &__link
+    background: url('../img/unlink.svg') no-repeat top right
+    background-size: contain
+    width: 25px
+    height: 25px
+    display: block
+    position: absolute
+    top: 10px
+    right: 10px
+    transition: all .3s ease
+    &:hover
+      background: url('../img/broken-link.svg') no-repeat center center
+      background-size: contain
+
+.more-button
+  margin-top: 40px
+  margin-bottom: 60px
+  display: none
+
+.active
+  display: inline-block
+
+@import 'media'
+
+

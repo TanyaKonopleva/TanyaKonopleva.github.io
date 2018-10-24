@@ -1,0 +1,35 @@
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #191b1a
+  z-index: 1
+  display: flex
+  justify-content: center
+  align-items: center
+  span
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    width: 12px
+    height: 12px
+    line-height: 12px
+    &::before
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background: #ffd040
+    &:first-child
+      &::before
+        animation: preloader .6s linear infinite
+    &:nth-child(2)
+      &::before
+        animation: preloader .6s linear infinite .2s
+    &:nth-child(3)
+      &::before
+        animation: preloader .6s linear infinite .4s
