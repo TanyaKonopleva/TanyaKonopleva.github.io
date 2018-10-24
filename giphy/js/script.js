@@ -50,7 +50,7 @@ var methods = (function() {
 })();
 
 var trending = (function() { 
-  var url = 'https://api.giphy.com/v1/gifs/trending?&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs';
+  var url = 'https://api.giphy.com/v1/gifs/trending?&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20';
   return {
     init: function() {
       window.addEventListener('DOMContentLoaded', function() { //show popular giffs after page load
@@ -68,10 +68,11 @@ var search = (function() {
       offset = 0;
 
   function searchGiffs() {
+    var input = document.querySelector('.search-input').value;
+    if (input === '') return;
     div.innerHTML = '';
     moreBtn.classList.add('active');
-    var input = document.querySelector('.search-input').value;
-    var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs';
+    var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20';
     methods.getData(url);
   }
   return {
@@ -95,7 +96,7 @@ var showMore = (function() {
       moreBtn.addEventListener('click', function() {
         var input = document.querySelector('.search-input').value;
         offset += 5;
-        var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&offset=' + offset;
+        var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20&offset=' + offset;
         methods.getData(url);
       })
     }

@@ -246,24 +246,24 @@ button {
   border-radius: 5px;
   width: 75%;
   min-height: 50px;
-  color: #fff;
+  color: #1D1AB2;
   font-size: 21px;
 }
 
 .search-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(29, 26, 178, 0.5);
 }
 
 .search-input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(29, 26, 178, 0.5);
 }
 
 .search-input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(29, 26, 178, 0.5);
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(29, 26, 178, 0.5);
 }
 
 .search-button {
