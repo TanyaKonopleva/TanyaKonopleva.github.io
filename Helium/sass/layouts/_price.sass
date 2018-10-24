@@ -1,0 +1,55 @@
+.price
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    &__inner
+      margin: 15px 0
+      padding: 0px 15px
+      flex: 0 0 33.3%
+      max-width: 33.3%
+    &__table
+      text-align: center
+      border-radius: 4px
+      box-shadow: 0 2px 18px 0 rgba(198,198,198,.3)
+    &__name
+      padding: 25px
+      margin-bottom: 0
+    &__title
+      margin: 0
+      font-size: 22px
+      color: #333
+    &__value
+      margin-bottom: 30px
+      font-size: 50px
+      line-height: 76px
+      font-weight: 700
+      color: #333
+      span
+        display: block
+        font-size: 14px
+        line-height: 16px
+    &__plan
+      ul
+        margin-bottom: 15px
+      li
+        padding: 10px
+        font-size: 15px
+        letter-spacing: 1px
+        i
+          margin-right: 10px
+    &__btn
+      margin: 15px 0 30px
+      background-color: #fff
+      text-transform: uppercase
+    &_active
+      background-color: $color-icon
+      color: #fff
+      p, h3
+        color: #fff
+      input[type=submit]
+        border-color: #fff
+      input[type=submit]:hover
+        background-color: #fff
+        color: $color-icon

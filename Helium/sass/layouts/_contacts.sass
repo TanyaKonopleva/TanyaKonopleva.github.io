@@ -1,0 +1,68 @@
+.contact
+  &-wrap
+    margin: 0 -15px
+    display: flex
+    align-items: flex-start
+  &-feedback
+    padding: 0 15px
+    flex-basis: 66.6%
+    &__title
+      margin-bottom: 30px
+      font-size: 30px
+    &__input
+      display: flex
+      justify-content: space-between
+    &__inner
+      position: relative
+      max-width: 32%
+      .icon
+        position: absolute
+        left: 20px
+        top: 16px
+        color: $title-color
+  &-info
+    padding: 0 15px
+    &__inner
+      padding-left: 10px
+    &__title
+      margin-bottom: 25px
+      font-size: 24px  
+    &__address
+      margin-bottom: 15px
+      font-size: 14px
+      color: $title-color  
+      font-style: normal
+      line-height: 1.8
+    a
+      margin-bottom: 10px
+      display: block
+      font-size: 14px
+      color: $title-color
+      line-height: 1.8
+  &-social
+    padding-left: 10px
+    margin-top: 10px
+    display: flex
+    a
+      margin-right: 20px
+      font-size: 18px
+      color: $title-color
+
+
+.form
+  margin-bottom: 30px
+  padding: 15px 25px 15px 50px
+  color: $title-color
+  font-family: 'Rubik', sans-serif
+  border: 1px solid #ddd
+  min-height: 50px
+  font-size: 14px
+  width: 100%
+  &::placeholder
+    color: #ccc
+  &:focus
+    border-color: $color-icon
+  &-input
+  &-textarea
+    resize: vertical
+    height: 217px

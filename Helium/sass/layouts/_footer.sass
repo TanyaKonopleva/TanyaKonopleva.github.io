@@ -1,0 +1,102 @@
+.footer
+  background-color: #282828
+  color: #7c7c7c
+  &-block
+    padding: 0px 15px
+    max-width: 25%
+    flex: 0 0 25%
+  &-widget
+    margin-right: -15px
+    margin-left: -15px
+    padding: 30px 0
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-wrap: wrap
+    &__title
+      margin-bottom: 20px
+      font-size: 22px
+      color: #fff
+      text-transform: capitalize
+      &_up
+        text-transform: uppercase
+    &__text
+      margin-bottom: 10px
+      color: #fff
+    &__social
+      display: flex
+      .fa-facebook:hover
+        background-color: $facebook
+        border-color: $facebook
+      .fa-twitter:hover
+        background-color: $twitter
+        border-color: $twitter
+      .fa-linkedin:hover
+        background-color: $linkedin
+        border-color: $linkedin
+      .fa-google-plus:hover
+        background-color: $google
+        border-color: $google
+    &__menu
+      li
+        margin-bottom: 10px
+        line-height: 25px
+      a
+        color: #fff
+        font-size: 14px
+        &:hover
+          color: $color-icon
+    &__inner
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+    &__img
+      padding: 5px
+      width: 32%
+      overflow: hidden
+      img
+        width: 100%
+    &__input
+      margin-bottom: 15px
+      padding: 10px 20px
+      color: #999
+      font-size: 14px
+      background-color: #1d1d1d
+  &-copyright
+    padding: 30px 0
+    background-color: #1d1d1d
+    &_flex
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+    &__text
+      color: #999
+      span
+        color: #fff
+    &__list
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        color: #999
+        font-size: 14px
+        text-transform: capitalize
+        padding: 0 14px
+        &:hover
+          color: $color-icon
+
+
+.icon-round
+  margin: 4px
+  font-size: 14px
+  color: $color-icon
+  height: 35px
+  width: 35px
+  border: 1px solid $color-icon
+  line-height: 35px
+  text-align: center
+  transition: 0.2s all linear
+  &:hover
+    color: #fff

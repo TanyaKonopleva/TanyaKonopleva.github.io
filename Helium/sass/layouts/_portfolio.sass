@@ -1,0 +1,80 @@
+.portfolio
+  background-color: $bg-light
+  &-wrap
+    &__tabs
+      text-align: center
+      .active
+        background-color: #e63d4f
+        color: #fff
+    &__content
+      margin-top: 60px
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+    &__item
+      flex: 0 0 33.3%
+      max-width: 33.3%
+      position: relative
+      display: none
+      &:hover
+        .portfolio-wrap__overlay
+          opacity: 1
+          transform: scale(1)
+        .portfolio-wrap__title
+          transform: scale(1)
+        .portfolio-wrap__text
+          transform: translateY(0)
+        .portfolio-wrap__icons a
+          transform: translateY(0)
+    &__img
+      width: 100%
+      overflow: hidden
+      img
+        display: block
+        width: 100%
+    &__overlay
+      padding: 35px
+      position: absolute
+      top: 15px
+      left: 15px
+      bottom: 15px
+      right: 15px
+      background-color: rgba(235,88,111,.7)
+      text-align: center
+      transform: scale(0.8)
+      transition: .4s all linear
+      opacity: 0
+    &__icons
+      margin-bottom: 20px
+      a
+        margin-right: 5px
+        font-size: 14px
+        border-radius: 50%
+        color: #fff
+        border: 1px solid #fff
+        display: inline-block
+        width: 42px
+        height: 42px
+        line-height: 42px
+        transform: translateY(-50px)
+        transition: .4s all ease-in-out
+        &:hover
+          color: $color-icon
+          background-color: #fff
+    &__title
+      margin-bottom: 10px
+      font-size: 18px
+      color: #fff
+      text-transform: uppercase
+      transform: scale(0)
+      transition: .4s all ease-in-out
+    &__text
+      font-size: 13px
+      color: #ffffff
+      line-height: 18px
+      transform: translateY(50px)
+      transition: .4s all ease-in-out
+
+
+             
+        

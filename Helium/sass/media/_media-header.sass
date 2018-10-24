@@ -1,0 +1,42 @@
+@media (max-width: 992px)
+  .header
+    &-sliders
+      &__text
+        max-width: 75%
+      &__subtitle
+        margin-bottom: 10px
+      &__btn
+        padding: 7px 10px
+        min-width: 150px
+    .navbar-wrap
+      padding-top: 0
+      &__menu
+        display: none
+      &__logo
+        img
+          max-width: 75%
+      &__toggle
+        display: block
+
+@media (min-width: 992px)
+  .header
+    .navbar-wrap__toggle-menu
+      display: none!important
+
+@media (max-width: 767px)
+  .header-sliders
+    &__text
+      max-width: 90%
+    &__title
+      font-size: 26px
+
+@media (max-width: 480px)
+  .header-sliders
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 16px
+    &__btn
+      margin: 5px
+      padding: 5px
+      font-size: 17px

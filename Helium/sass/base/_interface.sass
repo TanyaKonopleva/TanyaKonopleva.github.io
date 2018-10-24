@@ -1,0 +1,44 @@
+.button
+  padding: 11px 27px
+  font-size: 14px
+  color: $color-icon
+  border: 2px solid $color-icon
+  background-color: transparent
+  font-weight: 400
+  text-transform: capitalize
+  transition: 0.2s ease-in
+  &:hover
+    background-color: $color-icon
+    color: #fff
+
+.to-top
+  display: none
+  position: fixed
+  bottom: 18px
+  right: 15px
+  text-decoration: none
+  i
+    font-size: 22px
+    background: #e63d4f
+    color: #fff
+    width: 40px
+    height: 40px
+    line-height: 40px
+    border-radius: 2px
+    text-align: center
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+    transition: .2s all ease-in-out
+
+@keyframes tabsHide
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(0)
+
+@keyframes tabsShow
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+    

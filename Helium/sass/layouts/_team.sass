@@ -1,0 +1,79 @@
+.team
+  background-color: $bg-light
+  &-wrap
+    margin: 0 -15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    &__inner
+      padding: 0 15px
+      flex: 0 0 33.3%
+      max-width: 33.3%   
+      text-align: center
+  &__img
+    overflow: hidden
+    position: relative
+    cursor: pointer
+    &:hover 
+      .team-overlay
+        opacity: 1
+      .team-overlay__text
+        transform: translateY(0)
+      .team-overlay__social
+        transform: translateY(0)
+    img
+      width: 100%
+  &-overlay
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.85)
+    transition: all .3s ease-in-out 0s
+    opacity: 0
+    &__inner
+      padding-top: 30%
+    &__text
+      transform: translateY(50px)
+      transition: all .3s ease-in-out 0s
+    &__name
+      margin-bottom: 5px
+      font-size: 22px
+      font-weight: 700
+      color: #fff
+    &__position
+      margin-bottom: 60px
+      font-size: 14px
+      font-style: italic
+      font-weight: 400
+      color: #fff
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        margin-top: 30px
+        width: 50px
+        height: 1px
+        left: 50%
+        margin-right: -50%
+        transform: translate(-50%, -50%)
+        background-color: #fff
+    &__social
+      display: flex
+      justify-content: center
+      align-items: center
+      transform: translateY(-50px)
+      transition: all .3s ease-in-out 0s
+      li
+        margin: 0 10px
+      a
+        color: #fff
+        font-size: 24px
+        .fa-facebook:hover
+          color: $facebook
+        .fa-twitter:hover
+          color: $twitter
+        .fa-instagram:hover
+          color: $instagram
