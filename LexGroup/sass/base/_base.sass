@@ -1,0 +1,348 @@
+%d-flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+body 
+  overflow-x: hidden
+  
+.container
+  width: 100%
+  max-width: 960px
+  margin: 0 auto
+
+h2
+  color: $yellow
+  font-family: $futura
+  font-size: 50px
+  line-height: 60px
+
+h3
+  color: $h3_grey
+  font-family: $futura
+  font-size: 40px
+  line-height: 55px
+
+h4 
+  color: $h3_grey
+  font-family: $futura
+  font-size: 20px
+  line-height: 30px
+
+p
+  color: $text_grey
+  font-family: $demiC
+  font-size: 16px
+  line-height: 25px
+
+ul 
+  list-style: none
+
+.navbar 
+  padding-top: 25px
+  max-width: 1310px
+  margin: 0 auto
+  @extend %d-flex
+  &__logo
+    @extend %d-flex
+    a 
+      margin-right: 22px
+      color: $white
+      font-family: $futura
+      font-size: 26px
+    p 
+      padding-left: 13px
+      color: $white
+      font-family: $bookC
+      font-size: 18px
+      font-weight: 400
+      position: relative
+      &::before
+        content: ''
+        width: 2px
+        height: 19px
+        background-color: $white
+        position: absolute
+        top: 50%
+        left: 0
+        margin-top: -9px
+  &__links  
+    @extend %d-flex
+    .menu
+      @extend %d-flex
+      margin-right: 58px
+      list-style: none
+      li
+        margin-right: 41px
+      & :last-child
+        margin-right: 0
+      &__link
+        color: $white
+        font-family: $futura
+        font-size: 16px
+        transition: all .3s ease
+        &:hover
+          color: $yellow
+        &:active
+          color: #a68100
+  &__phone
+    margin-right: 23px
+    padding: 0 4px 9px 25px
+    color: $yellow
+    font-family: $futura
+    font-size: 14px
+    border-bottom: 1px dashed $yellow
+    position: relative
+    &_icon
+      display: inline-block
+      vertical-align: middle
+      width: 12px
+      height: 12px
+      background: url('../icon/telephone-handle-silhouette.svg') no-repeat center
+      background-size: contain
+      position: absolute
+      left: 5px
+
+.subtitle
+  margin-bottom: 33px
+  color: $yellow
+  font-family: $futura
+  font-size: 12px
+  text-transform: uppercase
+  letter-spacing: 0.54px
+
+button
+  border: none
+  outline: none
+
+.btn
+  width: 180px
+  height: 64px
+  border-radius: 32px
+  border: 2px solid $white
+  background-color: rgba($btn_simple, 0.7)
+  color: $white
+  font-family: $futura
+  font-size: 16px
+  transition: all .1s ease-in-out
+  &:hover
+    background-color: $yellow
+  &:active
+    background-color: #a68100
+
+.tour-btn
+  width: 298px
+  height: 80px
+  border-radius: 40px
+  border: none
+  background-image: linear-gradient(to top, #ffae00 0%, #ffc600 100%)
+  background-color: #a68100
+  box-shadow: 0px 5px 0px 0px #a68100, 0 13px 32px #ffc600
+  color: #242a32
+  font-family: $futura
+  font-size: 16px
+  text-transform: uppercase
+  letter-spacing: 0.37px
+  transition: all .3s ease-in-out
+  &:hover
+    box-shadow: 0 13px 32px #ffc600
+  &:active
+    background-image: linear-gradient(to top, #c48600 0%, #ca9d00 100%)
+
+.input
+  &-field
+    position: relative
+    max-width: 598px
+    width: 100%
+    margin: 0 auto
+    &::before
+      content: ''
+      background: url('../icon/call.svg') no-repeat center
+      background-size: contain
+      display: block
+      width: 26px
+      height: 26px
+      position: absolute
+      left: 31px
+      top: 50%
+      margin-top: -13px
+  &-phone
+    padding: 30px 300px 31px 80px
+    width: 100%
+    height: 80px
+    border: none
+    border-radius: 40px
+    background-color: $white
+    font-size: 16px
+    font-family: $demiC
+    box-shadow: 0 23px 51px rgba(0, 0, 0, 0.23)
+    transition: all .3s ease-in-out
+    &::placeholder
+      color: $text_grey
+      font-family: $demiC
+      font-size: 16px
+      line-height: 25px
+    &:focus
+      box-shadow: 0 0 51px rgba(0, 0, 0, 0.23)
+  &-btn
+    border: none
+    max-width: 298px
+    width: 100%
+    min-height: 80px
+    border-radius: 40px
+    background-color: $h3_grey
+    position: absolute
+    top: 0
+    right: 0
+    color: $white
+    font-family: $futura
+    font-size: 16px
+    text-transform: uppercase
+    letter-spacing: 0.37px
+    transition: all .3s ease-in-out
+    &:hover
+      background-color: $yellow
+
+.btn_oval
+  padding: 29px 130px 28px 109px
+  max-width: 298px
+  border-radius: 40px
+  border: 3px solid $h3_grey
+  background-color: transparent
+  color: $h3_grey
+  font-family: $futura
+  font-size: 16px
+  text-transform: uppercase
+  letter-spacing: 0.37px
+  position: relative
+  &::after
+    content: ''
+    background: url('../icon/arrow.svg') no-repeat center
+    background-size: contain
+    width: 12px
+    height: 12px
+    display: block
+    position: absolute
+    top: 50%
+    margin-top: -6px
+    right: 97px
+    transition: all .3s ease-in-out
+  &:hover::after
+    right: 106px
+
+.agree-checked
+  margin-right: 12px
+  width: 11px
+  height: 11px
+  border-radius: 50%
+  border: 1px solid #989488
+  &:checked::after
+    content: ''
+    background: url('../icon/check.svg') no-repeat center
+    width: 12px
+    height: 8px
+    display: block
+
+.agree-checkbox
+  color: #919191
+  font-family: "Futura Light C"
+  font-size: 10px
+  display: flex
+  justify-content: center
+  align-items: center
+  span
+    margin-left: 3px
+    text-decoration: underline
+
+.arrow
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 64px
+  height: 64px
+  border: 1px solid #dcdcdc
+  border-radius: 50%
+  background-color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  transition: all .3s ease-in-out
+  &_left
+    margin-right: 26px
+    background-image: url('../icon/arrow-left.svg')
+  &_right
+    background-image: url('../icon/arrow-right.svg')
+  &:hover
+    border-color: $h3_grey
+  &s
+    display: flex
+
+.slider
+  margin-bottom: 54px
+  display: flex
+  width: 1199px
+
+.toggle-btn
+  display: none
+  background-color: transparent
+  span
+    display: block
+    width: 23px
+    height: 2px
+    background-color: $white
+  span + span
+    margin-top: 6px
+
+@media (max-width: 992px)
+  .slider
+    width: 100%
+
+@media (max-width: 767px)
+  h2
+    font-size: 25px
+    line-height: inherit
+  h3 
+    font-size: 25px
+    line-height: 30px
+  h4
+    line-height: inherit
+  .input-field
+    max-width: 298px
+    &::before
+      margin-top: 0
+      top: 27px
+  .input-phone
+    margin-bottom: 15px
+    padding-right: 0
+    width: 298px
+  .input-btn
+    position: static
+  .btn_oval
+    padding-left: 32px
+    max-width: 248px
+    width: 100%
+    &::after
+      right: 74px
+
+@media (max-width: 480px)
+  .input-field
+    max-width: 248px
+    &::before
+      left: 15px
+  .input-phone
+    padding-left: 56px
+    padding-right: 14px
+    width: 248px
+  .tour-btn
+    width: 250px
+  .agree-checkbox
+    font-size: 9px
+  .arrow
+    width: 45px
+    height: 44px
+    &_left
+      margin-right: 11px
+    &s
+      position: absolute
+      bottom: 170px
+      left: 35px
+      

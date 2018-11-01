@@ -1,0 +1,61 @@
+.selection-tour
+  padding: 75px 0 86px
+  background-color: $bg_grey
+  &__title
+    margin-bottom: 58px
+  &__subtitle
+    font-family: $futura
+    color: $h3_grey
+    line-height: 30px
+  &__descr
+    margin-bottom: 28px
+    font-size: 16px
+  &-wrap
+    @extend %d-flex
+    flex-wrap: wrap
+    &__inner
+      margin-bottom: 70px
+      width: 33.3%
+      &:hover
+        img
+          border-color: $yellow
+        input[type='checkbox']::after
+          content: ''
+          width: 17px
+          height: 17px
+          display: block
+          border-radius: 50%
+          background-color: $yellow
+    &__img
+      margin-bottom: 26px
+      img
+        border: 2px solid transparent
+        border-radius: 15px
+        transition: all .3s ease
+      .img-checked
+        border-color: $yellow
+    label
+      display: flex
+      align-items: center
+      justify-content: flex-start
+    input[type='checkbox']
+      margin-right: 18px
+      width: 27px
+      height: 27px
+      border-radius: 50%
+      border: 2px solid $h3_grey
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: all .3s ease
+      &:checked::after
+        content: ''
+        width: 17px
+        height: 17px
+        display: block
+        border-radius: 50%
+        background-color: $yellow
+
+
+
+

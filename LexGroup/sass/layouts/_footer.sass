@@ -1,0 +1,33 @@
+.footer
+  .navbar
+    padding-top: 32px
+    padding-bottom: 28px
+    &__logo
+      a
+        color: $h3_grey
+      p
+        color: $h3_grey
+        &::before
+          background-color: $h3_grey
+    &__links
+      .menu
+        a 
+          color: $h3_grey
+          transition: all .1s ease-in-out
+          &:hover
+            color: $yellow
+          &:active
+            color: #a68100
+    &__btn
+      background-color: transparent
+      color: $h3_grey
+      border: 2px solid rgba(#4c4b4b, .2)
+      transition: all .1s ease-in-out
+      &:hover
+        background-color: $yellow
+        color: $white
+      &:active
+        color: $white
+        background-color: #a68100
+    .design
+      display: none

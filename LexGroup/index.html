@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LexGroup</title>
+
+  <link rel="shortcut icon" href="fav/16x16.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/slick.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+  <header class="header">
+
+    <div class="navbar">
+
+      <div class="navbar__logo">
+        <a href="index.html">LexGroup</a>
+        <p>Туристическое агентство</p>
+      </div>
+      <!-- /.navbar__logo -->
+
+      <div class="navbar__mobile-flex">
+        <div class="navbar__links">
+          <nav>
+            <ul class="menu">
+              <li><a href="#features" class="menu__link">О нас</a></li>
+              <li><a href="#advantages" class="menu__link">Почему мы</a></li>
+              <li><a href="#questions" class="menu__link">Вопросы</a></li>
+              <li><a href="#contacts" class="menu__link">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <a href="tel:+77777777777" class="navbar__phone">
+            <span class="navbar__phone_icon"></span>
+            <span class="mobile_hidden">+7 777 777 77 77</span>
+          </a>
+
+          <button class="btn navbar__btn">Заказать звонок</button>
+        </div>
+      <!-- /.navbar__links -->
+
+        <button class="toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+     </div>
+
+      <ul class="toggle-menu">
+        <li><a href="#features" class="toggle-menu__link">О нас</a></li>
+        <li><a href="#advantages" class="toggle-menu__link">Почему мы</a></li>
+        <li><a href="#questions" class="toggle-menu__link">Вопросы</a></li>
+        <li><a href="#contacts" class="toggle-menu__link">Контакты</a></li>
+        <li><button class="btn navbar__btn mobile-btn">Заказать звонок</button></li>
+      </ul>
+
+    </div>
+    <!-- /.navbar -->
+    <div class="container">
+
+      <div class="header-main">
+        <h1 class="header-main__title">LexGroup</h1>
+        <p class="header-main__text">Ваш гид в мир эксклюзивных путешествий</p>
+        <button class="tour-btn header-main__btn">Подобрать тур</button>
+      </div>
+      <!-- /.header-main -->
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+  <section class="videoMessage"> 
+    <div class="container">
+      <div class="videoMessage-wrap">
+        <div class="videoMessage-wrap__img">
+          <img src="img/video-img.png" alt="video">
+          <span class="videoMessage-wrap__icon"></span>
+        </div>
+        <div class="videoMessage-wrap__text">
+          <p class="subtitle videoMessage-wrap__subtitle">видеообращение</p>
+          <h3 class="videoMessage-wrap__title">Сервис класса премиум</h3>
+          <p class="videoMessage-wrap__descr">Опытные профессионалы со стажем более 20 лет помогут вам организовать путешествие мечты</p>
+          <button class="videoMessage-wrap__btn">Смотреть видео</button>
+        </div>
+      </div>
+      <!-- /.videoMessage-wrap -->
+    </div>
+    <!-- /.container -->
+
+    <div class="overlay">
+      <video src="video/mp4.mp4" autoplay controls></video>
+    </div>
+  </section>
+  <!-- /.videoMessage -->
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Из мечты в реальность</h2>
+
+      <div class="features-wrap">
+        <div class="features-wrap__inner">
+          <div class="features-wrap__img"><img src="icon/из_мечты_в_реальность/24-hours.svg" alt="hours"></div>
+          <h3 class="features-wrap__title">Забота о вас</h3>
+          <p class="features-wrap__text">24 часа 7 дней в неделю</p>
+        </div>
+        <div class="features-wrap__inner">
+          <div class="features-wrap__img"><img src="icon/из_мечты_в_реальность/choices.svg" alt="choices"></div>
+          <h3 class="features-wrap__title">Ваш комфорт – <br>наш приоритет</h3>
+          <p class="features-wrap__text">Любое Ваше пожелание будет учтено и реализовано</p>
+        </div>
+        <div class="features-wrap__inner">
+          <div class="features-wrap__img"><img src="icon/из_мечты_в_реальность/hotel.svg" alt="hotel"></div>
+          <h3 class="features-wrap__title">Отели класса Люкс</h3>
+          <p class="features-wrap__text">Мы тщательно изучаем предпочтения клиентов и выбираем только лучшие отели</p>
+        </div>
+        <div class="features-wrap__inner">
+          <div class="features-wrap__img"><img src="icon/из_мечты_в_реальность/wallet.svg" alt="wallet"></div>
+          <h3 class="features-wrap__title">Привлекательные цены</h3>
+          <p class="features-wrap__text">Мы готовы предложить нашим клиентам лучшие цены</p>
+        </div>
+      </div>
+      <!-- /.features-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.features -->
+
+  <section class="request">
+    <div class="container">
+      <div class="request-wrap">
+        <p class="subtitle">Оставить заявку</p>
+        <h3 class="request-wrap__title">Доверьте реализацию вашей мечты профессионалам</h3>
+        <form action="#">
+          <div class="input-field request-wrap__field">
+            <input type="tel" class="input-phone" placeholder="Введите номер телефона">
+            <input type="submit" class="input-btn" value="Подобрать тур">
+          </div>
+        </form>
+        <label class="agree-checkbox">
+          <input class="agree-checked" type="checkbox" checked>Я согласен с условиями обработки<span>персональных данных</span>
+        </label>
+      </div>
+      <!-- /.request-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.request -->
+
+  <section id="advantages" class="advantages">
+    <div class="container">
+      <p class="subtitle">преимущества</p>
+      <h3 class="advantages__title">Почему стоит доверять профессионалам?</h3>
+
+      <div class="advantages-wrap">
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/shield_(1).svg" alt="Надежность"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Надежность</h4>
+            <p class="advantages-wrap__descr">Выбираем исключительно надежных и проверенных партнеров</p>
+          </div>
+        </div>
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/like_(2).svg" alt="like"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Не промахнетесь с выбором</h4>
+            <p class="advantages-wrap__descr">Вы сможете подобрать лучший вариант для отдыха</p>
+          </div>
+        </div>
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/wallet_(2).svg" alt="wallet"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Лучшие цены</h4>
+            <p class="advantages-wrap__descr">Мы работаем без посредников благодаря чему можем предлагать Вам лучшие цены </p>
+          </div>
+        </div>
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/around.svg" alt="around"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Больше увидите</h4>
+            <p class="advantages-wrap__descr">Популярные и эксклюзивные путевки в любой уголок земного шара</p>
+          </div>
+        </div>
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/certificate_(2).svg" alt="certificate"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Почувствуйте настоящий сервис</h4>
+            <p class="advantages-wrap__descr">Профессиональный подход к каждому клиенту</p>
+          </div>
+        </div>
+        <div class="advantages-wrap__inner">
+          <div class="advantages-wrap__img"><img src="icon/преимущества/hand-shake.svg" alt="hand-shake"></div>
+          <div class="advantages-wrap__text">
+            <h4 class="advantages-wrap__title">Индивидуальный подход</h4>
+            <p class="advantages-wrap__descr">Внимательно изучаем Ваши предпочтения и предлагаем наиболее подходящий вариант</p>
+          </div>
+        </div>
+      </div>
+      <!-- /.advantages-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.advantages -->
+
+  <section class="selection-tour">
+    <div class="container">
+      <p class="subtitle">Подбор тура</p>
+      <h3 class="selection-tour__title">Ответьте на несколько вопросов и мы подберем вам лучшие предложения</h3>
+      <p class="selection-tour__subtitle">Что вы хотите получить от отдыха?</p>
+      <p class="selection-tour__descr">Выберите один или несколько вариантов</p>
+
+      <div class="selection-tour-wrap">
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_1.png" alt="img"></div>
+          <label><input type="checkbox">SPA отдых (Relax отдых)</label>
+        </div>
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_2.png" alt="img"></div>
+          <label><input type="checkbox">Экскурсионный отдых</label>
+        </div>
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_3.png" alt="img"></div>
+          <label><input type="checkbox">Романтичный отдых</label>
+        </div>
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_4.png" alt="img"></div>
+          <label><input type="checkbox">Активный отдых</label>
+        </div>
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_5.png" alt="img"></div>
+          <label><input type="checkbox">Экзотические туры</label>
+        </div>
+        <div class="selection-tour-wrap__inner">
+          <div class="selection-tour-wrap__img"><img src="img/выбор_тура/img_6.png" alt="img"></div>
+          <label><input type="checkbox">Свой вариант ответа</label>
+        </div>
+      </div>
+      <!-- /.selection-tour-wrap -->
+      <button class="btn_oval">Далее</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.selection-tour -->
+
+  <section class="reviews">
+    <div class="container">
+      <p class="subtitle">Отзывы</p>
+      <h3 class="reviews__title">За годы работы мы получили больше 1000 отзывов от довольных клиентов</h3>
+
+      <div class="reviews-wrap">
+        <div class="reviews-wrap__inner">
+          <div class="reviews-wrap__img"><img src="img/reviews_1.png" alt="photo"></div>
+          <h4 class="reviews-wrap__title">Захар Мезенцев</h4>
+          <p class="reviews-wrap__text">Нам порекомендовали LexTour друзья и мы не разочаровались. Спасибо Ирине за  рекомендации с выбором.</p>
+        </div>
+        <div class="reviews-wrap__inner">
+          <div class="reviews-wrap__img"><img src="img/reviews_2.png" alt="photo"></div>
+          <h4 class="reviews-wrap__title">Алена Кравченко</h4>
+          <p class="reviews-wrap__text">В 2017 году через турфирму LexTour ездили в Крым. Все очень понравилось. Спасибо большое :)</p>
+        </div>
+        <div class="reviews-wrap__inner">
+          <div class="reviews-wrap__img"><img src="img/reviews_3.png" alt="photo"></div>
+          <h4 class="reviews-wrap__title">Карен Арамян</h4>
+          <p class="reviews-wrap__text">Помогли с выбором, поездка удалась! LexTour мне посоветовал друг - заядлый путешественник.</p>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.reviews -->
+
+  <section class="example">
+    <div class="container">
+      <p class="subtitle">Пример</p>
+      <h3 class="example__title">Пример предложения для наших клиентов</h3>
+      <p class="example__text">Мы предлагаем нашим клиентам самый полный каталог наших лучших предложений</p>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section  -->
+
+  <section class="hotel">
+    <div class="container">
+      <p class="subtitle">Отели</p>
+      <div class="hotel-top">
+        <h3 class="hotel-top__title">Прямые цены<br>от топовых отелей мира</h3>
+        <div class="arrows">
+          <button class="arrow arrow_left"></button>
+          <button class="arrow arrow_right"></button>
+        </div>  
+      </div>
+
+      <div class="slider">
+        <div class="slider-wrap">
+          <img src="img/hotel_1.png" alt="hotel">
+          <div class="slider-wrap__descr">
+            <div class="slider-wrap__stars">
+              <img src="icon/star.svg" alt="star" class="star">
+              <img src="icon/star.svg" alt="star" class="star">
+              <img src="icon/star.svg" alt="star" class="star">
+              <img src="icon/star.svg" alt="star" class="star">
+              <img src="icon/star.svg" alt="star" class="star">
+            </div>
+            <h4 class="slider-wrap__title">Bulgari Resort <span>Dubai</span></h4>
+            <h4 class="slider-wrap__price">от 30 000 р</h4>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/hotel_2.png" alt="hotel">
+          <div class="slider-wrap__descr">
+              <div class="slider-wrap__stars">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+              </div>
+              <h4 class="slider-wrap__title">Sandals Royal Caribbean <span>Jamaica</span></h4>
+              <h4 class="slider-wrap__price">от 40 000 р</h4>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/hotel_3.png" alt="hotel">
+          <div class="slider-wrap__descr">
+              <div class="slider-wrap__stars">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+              </div>
+              <h4 class="slider-wrap__title">Grace <br><span>Santorini</span></h4>
+              <h4 class="slider-wrap__price">от 50 000 р</h4>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/hotel_1.png" alt="hotel">
+          <div class="slider-wrap__descr">
+              <div class="slider-wrap__stars">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+              </div>
+              <h4 class="slider-wrap__title">Bulgari Resort <span>Dubai</span></h4>
+              <h4 class="slider-wrap__price">от 30 000 р</h4>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/hotel_2.png" alt="hotel">
+          <div class="slider-wrap__descr">
+              <div class="slider-wrap__stars">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+              </div>
+              <h4 class="slider-wrap__title">Bulgari Resort <span>Dubai</span></h4>
+              <h4 class="slider-wrap__price">от 30 000 р</h4>
+          </div>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/hotel_3.png" alt="hotel">
+          <div class="slider-wrap__descr">
+              <div class="slider-wrap__stars">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+                <img src="icon/star.svg" alt="star" class="star">
+              </div>
+              <h4 class="slider-wrap__title">Grace <br><span>Santorini</span></h4>
+              <h4 class="slider-wrap__price">от 50 000 р</h4>
+          </div>
+        </div>
+
+      </div>
+      <button class="tour-btn">Подобрать тур</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.hotel -->
+
+  <section class="certificate">
+    <div class="container">
+      <div class="certificate-wrap">
+        <p class="subtitle">в подарок</p>
+        <h3 class="certificate-wrap__title">Подарочный сертификат</h3>
+        <p class="certificate-wrap__text">Cертификат от LexGroup – это отличный вариант подарить по-настоящему желанный подарок, который будет актуален в любое время года и подойдет к любому празднику</p>
+        <button class="btn_oval">Сделать подарок</button>
+      </div>
+      <!-- /.certificate-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.certificate -->
+
+  <section class="numbers">
+    <div class="container">
+      <p class="subtitle">Цифры</p>
+      <h3 class="numbers__title">Цифры о компании</h3>
+
+      <div class="numbers-wrap">
+        <div class="numbers-wrap__inner">
+          <h2 class="numbers-wrap__title">20 лет</h2>
+          <h4 class="numbers-wrap__subtitle">опыт</h4>
+          <p class="numbers-wrap__text">Разнообразный и богатый опыт позволяет предлагать нашим клиентам лучший сервис</p>
+        </div>
+        <div class="numbers-wrap__inner">
+          <h2 class="numbers-wrap__title">5000</h2>
+          <h4 class="numbers-wrap__subtitle">клиентов</h4>
+          <p class="numbers-wrap__text">Отзывы наших довольных клиентов говорят о многом и очень важны для нас</p>
+        </div>
+        <div class="numbers-wrap__inner">
+          <h2 class="numbers-wrap__title">10 минут</h2>
+          <h4 class="numbers-wrap__subtitle">самое долгое время ответа клиенту</h4>
+          <p class="numbers-wrap__text">Получите консультацию в максимально короткие сроки</p>
+        </div>
+      </div>
+      <!-- /.numbers-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.numbers -->
+
+  <section class="offers">
+    <div class="container">
+      <p class="subtitle">наши предложения</p>
+      <!-- similar slider -->
+      <div class="hotel-top"> 
+      <h3 class="offers__title">Десятки предложений под ситауцию</h3>
+        <div class="arrows">
+          <button class="arrow arrow_left"></button>
+          <button class="arrow arrow_right"></button>
+        </div>  
+      </div>
+
+      <div class="slider">
+        <div class="slider-wrap">
+          <img src="img/slider_1.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Предложение руки и сердца</h4>
+          <p class="slider-offers__text">Поездка с подборкой самых красивых и романтичных мероприятий.</p>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/slider_2.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Свадебные туры на Мальдивы</h4>
+          <p class="slider-offers__text">Свадьба за границей – это новая возможность провести необычную и романтическую свадьбу.</p>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/slider_3.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Отдых с пацанами</h4>
+          <p class="slider-offers__text">Хотите хорошенько отдохнуть с друзьями? У нас есть для вас несколько предложений!</p>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/slider_1.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Предложение руки и сердца</h4>
+          <p class="slider-offers__text">Поездка с подборкой самых красивых и романтичных мероприятий.</p>
+        </div>
+  
+        <div class="slider-wrap">
+          <img src="img/slider_2.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Свадебные туры на Мальдивы</h4>
+          <p class="slider-offers__text">Свадьба за границей – это новая возможность провести необычную и романтическую свадьбу.</p>
+        </div>
+
+        <div class="slider-wrap">
+          <img src="img/slider_3.png" alt="photo" class="slider-offer__img">
+          <h4 class="slider-offers__title">Отдых с пацанами</h4>
+          <p class="slider-offers__text">Хотите хорошенько отдохнуть с друзьями? У нас есть для вас несколько предложений!</p>
+        </div>
+      </div>
+      <!-- /.slider-wrap -->
+
+      <button class="tour-btn offers-tour-btn">Выбрать одно из предложений</button>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.offers -->
+
+  <section class="subscr">
+    <div class="container">
+      <p class="subtitle">Подписка</p>
+      <h3 class="subscr__title">Подпишитесь на нашу рассылку, и получайте лучшие предложения в мессенджеры</h3>
+
+      <ul class="subscr__social-menu">
+        <li class="subscr__social-item subscr__social-item_fb">
+          <div class="subscr__social__img">
+            <img src="icon/social/facebook.png" alt="facebook">
+          </div>
+          <a href="#" class="subscr__social-link">
+            <span>Подписаться</span>
+          </a>
+        </li>
+        <li class="subscr__social-item subscr__social-item_vk">
+          <div class="subscr__social__img">
+            <img src="icon/social/vk.png" alt="vk">
+          </div>
+          <a href="#" class="subscr__social-link subscr__social-link_vk">
+            <span>Подписаться</span>
+          </a>
+        </li>
+        <li class="subscr__social-item subscr__social-item_viber">
+          <div class="subscr__social__img">
+            <img src="icon/social/viber.png" alt="viber">
+          </div>
+          <a href="#" class="subscr__social-link subscr__social-link_viber">
+            <span>Подписаться</span>
+          </a>
+        </li>
+        <li class="subscr__social-item subscr__social-item_telegram">
+          <div class="subscr__social__img">
+            <img src="icon/social/telegram.png" alt="telegram">
+          </div>
+          <a href="#" class="subscr__social-link subscr__social-link_telegram">
+            <span>Подписаться</span>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.subscr -->
+
+  <section id="questions" class="questions">
+    <div class="container">
+      <div class="questions-wrap">
+        <div class="questions-wrap__img">
+          <img src="img/woman.jpg" alt="woman">
+        </div>
+        <div class="questions-wrap__text">
+          <p class="subtitle">Вопросы</p>
+          <h3 class="questions-wrap__title">Получите ответы на популярные вопросы</h3>
+
+          <div class="questions-wrap__inner">
+            <div class="questions-wrap__answer">
+              <h2 class="questions-wrap__number">01</h2>
+              <div class="questions-wrap__content">
+                <h4 class="questions-wrap__subtitle">Страхование<span></span></h4>
+                <p class="questions-wrap__descr">Зачем оно нужно и как его получить</p>
+              </div>
+            </div>
+            <div class="questions-wrap__answer">
+                <h2 class="questions-wrap__number">02</h2>
+              <div class="questions-wrap__content">
+                <h4 class="questions-wrap__subtitle">Дисконтная программа<span></span></h4>
+                <p class="questions-wrap__descr">Как платить меньше и что для этого нужно</p>
+              </div>
+            </div>
+            <div class="questions-wrap__answer">
+                <h2 class="questions-wrap__number">03</h2>
+              <div class="questions-wrap__content">
+                <h4 class="questions-wrap__subtitle">Способы оплаты<span></span></h4>
+                <p class="questions-wrap__descr">Все о способах оплаты в нашем агентстве</p>
+              </div>
+            </div>
+            <div class="questions-wrap__answer">
+              <h2 class="questions-wrap__number">04</h2>
+              <div class="questions-wrap__content">
+                <h4 class="questions-wrap__subtitle">Корпоративным клиентам<span></span></h4>
+                <p class="questions-wrap__descr">Преимущества корпоративного обслуживания в нашей компании</p>
+              </div>
+            </div>
+          </div>
+          <!-- /.questions-wrap__inner -->
+          <h4 class="questions-wrap__phone">Введите свой номер WhatsApp и получите ответ на вопрос</h4>
+          <div class="input-field questions-wrap__field">
+            <input type="tel" class="input-phone" placeholder="Введите номер телефона">
+            <input type="submit" class="input-btn" value="Получить ответы">
+          </div>
+          <!-- /.input-field questions-wrap__field -->
+          <label class="agree-checkbox">
+            <input class="agree-checked" type="checkbox" checked>
+            Я согласен с условиями обработки <span>персональных данных</span>
+          </label>
+          
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.questions -->
+
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <p class="subtitle">Контакты</p>
+      <h3 class="contacts__title">Приезжайте к нам в офис и мы обсудим все на личной встрече!</h3>
+
+      <ul class="contacts__list">
+        <li>
+          <a href="tel:+77777777777" class="contacts__link">
+            <img src="icon/call.svg" alt="call" style="height: 23px;">
+            +7 777 777 77 77
+          </a>
+        </li>
+        <li>
+          <a href="mail:lextour@gmail.com" class="contacts__link">
+            <img src="icon/email.svg" alt="email" style="height: 19px;">
+            lextour@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="#" class="contacts__link">
+            <img src="icon/placeholder.svg" alt="map" style="height: 29px;">
+            ул. Макбука, 37, офис 211
+          </a>
+        </li>
+      </ul>
+
+      <div class="contacts-wrap">
+        <div class="contcts-wrap__text">
+          <h4 class="contacts-wrap__title">Не тратье Ваше время, оставьте заявку  и мы возьмем все сложности на себя</h4>
+          <div class="input-field contacts-wrap__field">
+            <input type="tel" class="input-phone contacts-wrap__input" placeholder="Введите номер телефона">
+            <input type="submit" class="tour-btn contacts-wrap__btn" value="Заказать звонок">
+          </div>
+
+          <label class="agree-checkbox">
+            <input class="agree-checked" type="checkbox" checked>
+            Я согласен с условиями обработки <span>персональных данных</span>
+          </label>
+        </div>
+        <div id="map"></div>
+      </div>
+      <!-- /.contacts-wrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.contacts -->
+
+  <footer class="footer">
+    <div class="navbar">
+
+        <div class="navbar__logo">
+          <a href="index.html">LexGroup</a>
+          <p>Туристическое агентство</p>
+        </div>
+        <!-- /.navbar__logo -->
+  
+        <div class="navbar__links">
+          <nav>
+            <ul class="menu">
+              <li><a href="#features" class="menu__link">О нас</a></li>
+              <li><a href="#advantages" class="menu__link">Почему мы</a></li>
+              <li><a href="#questions" class="menu__link">Вопросы</a></li>
+              <li><a href="#contacts" class="menu__link">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <button class="btn navbar__btn">Заказать звонок</button>
+          <p class="design">Задизайнено и разработано в WAYAgency</p>
+        </div>
+        <!-- /.navbar__links -->
+  
+      </div>
+      <!-- /.navbar -->
+  </footer>
+
+  <style>
+    .ymaps-2-1-69-ground-pane {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+  </style>
+
+
+  <script src="libs/jquery-3.3.1.min.js"></script>
+  <script src="libs/slick.min.js"></script>
+  <script src="libs/jquery.maskedinput.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/script.js"></script>
+  <script>
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.759453, 37.578655],
+            zoom: 15,
+            controls: []
+        }),
+
+        myPlacemark = new ymaps.Placemark([55.759453, 37.578655], {
+            hintContent: 'LexGroup'
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'icon/map.png',
+            iconImageSize: [77, 107],
+            iconImageOffset: [-30, -38]
+        });
+
+
+    myMap.geoObjects
+        .add(myPlacemark);
+});
+	</script>
+
+</body>
+</html>

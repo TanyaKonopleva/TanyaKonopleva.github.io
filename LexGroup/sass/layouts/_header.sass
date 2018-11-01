@@ -1,0 +1,116 @@
+.header
+  width: 100%
+  background: $black url('../img/header-bg.png') no-repeat center
+  background-size: cover
+  position: relative
+  z-index: 1
+  padding-bottom: 123px
+  &::after
+    content: ''
+    background-color: rgba(#274571, 0.3)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+  &-main
+    margin: 104px auto 0
+    text-align: center
+    &__title
+      text-shadow: 0 0 38px rgba(0, 0, 0, 0.23)
+      color: $white
+      font-family: $futura
+      font-size: 153px
+      &::first-letter
+        letter-spacing: -0.9px
+    &__text
+      margin-bottom: 69px
+      color: $yellow
+      font-family: $futura
+      font-size: 34px
+      line-height: 85.14px
+  .navbar_fix
+    padding: 15px 53px 13px 74px
+    max-width: 1440px
+    width: 100vw
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    background-color: $white
+    animation: navbar 1s
+    height: 89px
+    box-shadow: 0 0 51px rgba(0, 0, 0, 0.13)
+    z-index: 10
+    .navbar__logo
+      a
+        color: $black
+      p
+        color: $black
+        &::before
+          background-color: $black
+    .menu
+      &__link
+        color: $black
+        &:hover
+          color: $yellow
+        &:active
+          color: #a68100
+    .navbar__btn
+      border-color: $black
+      background-color: transparent
+      color: $black
+      &:hover
+        background-color: $yellow
+      &:active
+        background-color: #a68100
+    .toggle-btn 
+      top: 89px
+      span
+        background-color: $h3_grey
+
+
+@keyframes navbar
+  from
+    height: 50px
+    opacity: 0
+  to
+    height: 89px
+    opacity: 1
+
+.toggle-menu
+  padding: 20px 0
+  position: fixed
+  right: 10px
+  top: 89px
+  max-height: 350px
+  width: 300px
+  background-color: rgba($white, 1)
+  margin: 0
+  display: none
+  font-size: 15px
+  box-shadow: 0 6px 6px 3px rgba(0,0,0,.06)
+  text-align: center
+  li
+    line-height: 30px
+  &__link
+    margin: 2px 5px
+    padding: 5px 10px
+    display: block
+    color: $h3_grey
+    font-family: $futura
+    font-size: 16px
+    &:hover
+      color: $yellow
+    &:active
+      color: #a68100
+  .navbar__btn
+    background-color: transparent
+    border-color: rgba($h3_grey, .2)
+    color: $h3_grey
+    &:hover
+      border-color: rgba($h3_grey, 1)
+      background-color: $yellow
+    &:active
+      background-color: #a68100

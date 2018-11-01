@@ -1,0 +1,71 @@
+.videoMessage
+  padding-top: 51px
+  &-wrap
+    display: flex
+    &__img
+      margin-right: 30px
+      width: 50%
+      min-height: 516px
+      position: relative
+      img
+        position: absolute
+        left: -240px
+    &__icon
+      background: url('../icon/video-play.png') no-repeat center
+      background-size: contain
+      display: block
+      width: 140px
+      height: 98px
+      position: absolute
+      top: 50%
+      margin-top: -49px
+      cursor: pointer
+    &__text
+      padding: 72px 0 0 6px
+      width: 50%
+    &__title
+      font-size: 30px
+    &__descr
+      font-size: 20px 
+    &__btn
+      padding: 34px 80px 31px 41px
+      background-color: $bg_btn_grey
+      color: $white
+      font-family: $demiC
+      font-size: 16px
+      line-height: 16px
+      position: relative
+      top: 151px
+      left: -76px
+      &::after
+        content: ''
+        display: block
+        width: 30px
+        height: 1px
+        background-color: $white
+        position: absolute
+        top: 50%
+        right: 32px
+        transition: all .3s ease
+      &:hover 
+        &::after
+          right: 0
+          width: 62px
+
+
+.overlay
+  display: none
+  justify-content: center
+  align-items: center
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(0, 0, 0, .5)
+  video
+    max-width: 800px
+    width: 100%
+    max-height: 800px
+    margin: 0 auto
+    z-index: 999999

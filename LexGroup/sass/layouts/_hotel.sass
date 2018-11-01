@@ -1,0 +1,40 @@
+.hotel
+  padding: 40px 0 68px
+  overflow: hidden
+  &-top
+    margin-bottom: 48px
+    @extend %d-flex
+    &__title
+      max-width: 538px
+
+.slider-wrap
+  margin-right: 13px
+  position: relative
+  border-radius: 10px
+  outline: none
+  max-width: 387px
+  background-color: $white
+  img
+    width: 100%
+  &__descr
+    padding: 18px 0 23px 21px
+    background-color: $white
+    border-radius: 5px
+    position: absolute
+    bottom: 24px
+    left: 23px
+    right: 131px
+    min-height: 156px
+  &__stars
+    margin-bottom: 14px
+    display: flex
+    .star
+      margin-right: 5px
+      width: auto
+      cursor: pointer
+  &__title
+    max-width: 181px
+    span
+      font-family: $bookC
+  &__price
+    color: $yellow
