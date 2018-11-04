@@ -4,7 +4,7 @@ const media = document.querySelector('.media');
 
 const getContent = (search) => {
   const url = new URL('https://itunes.apple.com/search');
-  const params = {term: search, media: 'musicVideo'};
+  const params = {term: search, media: 'music'};
   url.search = new URLSearchParams(params);
   fetch(url)
       .then(response => response.json())
