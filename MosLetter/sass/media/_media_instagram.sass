@@ -1,0 +1,42 @@
+@media (max-width: 992px)
+  .instagram
+    &-wrap
+      &__img
+        margin-bottom: 20px
+
+@media (max-width: 768px)
+  .instagram
+    &__title
+      margin-bottom: 20px
+    &__subtitle
+      padding-left: 40px
+      margin-bottom: 47px
+      font-size: 14px
+      line-height: 22px
+      &::before
+        width: 23px
+        height: 23px
+        background-size: cover
+    &-wrap 
+      .slick-dots
+        list-style: none
+        bottom: 0
+        margin-left: -32px
+        li
+          background-color: #686868
+          width: 6px
+          height: 6px
+          border-radius: 50%
+        .slick-active
+          background-color: #fff
+      &__img
+        margin: 0 20px
+
+@media (max-width: 480px)
+  .instagram
+    overflow: hidden
+    &-wrap 
+      margin-left: -10%
+      margin-right: -10%
+      &__img
+        width: 215px

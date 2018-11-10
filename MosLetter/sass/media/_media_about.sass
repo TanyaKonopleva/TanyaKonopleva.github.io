@@ -1,0 +1,52 @@
+@media (max-width: 1350px)
+  .about
+    padding-bottom: 72px
+    &-wrap
+      flex-wrap: wrap
+      height: inherit
+      &__img
+        margin-bottom: 35px
+        text-align: center
+        width: 50%
+
+@media (max-width: 992px)
+  .about
+    .container
+      &::before
+        display: none
+
+@media (max-width: 768px)
+  .about
+    &-row
+      margin-bottom: 36px
+      display: block
+    &__title
+      margin-bottom: 20px
+    &-wrap 
+      margin-bottom: 27px
+      &__img
+        margin-left: 20px
+        margin-right: 20px
+        width: initial
+    .slick-dots
+      list-style: none
+      bottom: 0
+      margin-left: -32px
+      li
+        background-color: #686868
+        width: 6px
+        height: 6px
+        border-radius: 50%
+      .slick-active
+        background-color: #fff
+
+@media (max-width: 480px)
+  .about 
+    overflow: hidden
+    &-wrap
+      margin-left: -10%
+      margin-right: -10%
+      &__img
+        width: 215px
+        img 
+          width: 100%
