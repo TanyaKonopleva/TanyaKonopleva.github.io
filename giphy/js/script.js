@@ -1,132 +1,74 @@
-var methods = (function() {
-  var div = document.querySelector('.giffs-wrap'); // common container for giffs
+const methods = (function() {
 
-  return {
-    init: function() {
-      trending.init();
-      search.init();
-      showMore.init();
-    },
+  const HOST = 'https://api.giphy.com/v1/gifs/';
+  const KEY = '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs';
+  const LIMIT = '&limit=20';
+  const SEACRH = 'search?q=';
+  const OFFSET = '&offset=';
 
-    getData: function(url) {
-      var xhr = new XMLHttpRequest();
-      var self = this;
-      xhr.open('GET', url);
-      xhr.onprogress = function(e) {
-        document.querySelector('.preloader').style.display = 'flex';
-      }
-      xhr.onload = function() {
-        document.querySelector('.preloader').style.display = 'none';
-        if (xhr.status >= 200 && xhr.status < 400) {
-          var data = JSON.parse(xhr.responseText);
-          var giffsArr = data.data;
-          self.appendHTML(giffsArr);
-        };
-      };
-      xhr.send();
+  const div = document.querySelector('.giffs-wrap');
+  const input = document.querySelector('.search-input');
+  const searchBtn = document.querySelector('.search-button');
+  const moreBtn = document.querySelector('.more-button');
 
-    },
+  const getData = (url) => {
+    fetch(url) //замена XHR на fetch
+      .then((data) => data.json())
+      .then(( {data} ) => appendHTML(data))
+      .catch((err) => console.log(err));
+  };
 
-    appendHTML: function(arr) {
-      for (var i = 0; i < arr.length; i++) {
-        var wrap = document.createElement('div'), //container for giffs
-            img = document.createElement('img'), // for giffs
-            overlay = document.createElement('div'), //overlay for hover effect
-            link = document.createElement('a'); // link  for copy url of giffs
+  const appendHTML = (arr) => { 
+    let text = arr.map(( {images: {original: {url} }} ) => `<div class="giffs-wrap__img"> 
+      <img src="${url}" alt="giff">
+      <div class="giffs-wrap__overlay">
+        <a href="${url}" class="giffs-wrap__link" title="Copy link"></a>
+      </div>
+      </div>`).join('');
+    div.innerHTML = text;
+  };
 
-        wrap.classList.add('giffs-wrap__img'); 
-        wrap.appendChild(img);
-        img.src = arr[i].images.original.url; 
-        div.appendChild(wrap);
-        overlay.classList.add('giffs-wrap__overlay'); 
-        link.classList.add('giffs-wrap__link');
-        link.setAttribute('href', arr[i].images.original.url);
-        link.title = 'Copy link';
-        overlay.appendChild(link);
-        wrap.appendChild(overlay);
-      };
+  const searchGiffs = () => {
+    let val = input.value;
+    if (!!val) {
+      div.innerHTML = '';
+      getData(`${HOST}${SEACRH}${val}${KEY}${LIMIT}`);
+      moreBtn.classList.add('active');
     }
-  }
-})();
+  };
 
-var trending = (function() { 
-  var url = 'https://api.giphy.com/v1/gifs/trending?&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20';
-  return {
-    init: function() {
-      window.addEventListener('DOMContentLoaded', function() { //show popular giffs after page load
-        methods.getData(url);
-      });
-    }
-  }
-})();
+  const showMore = () => {
+    let val = input.value;
+    let offsetNum = 0;
+    getData(`${HOST}${SEACRH}${val}${KEY}${OFFSET}${LIMIT}${offsetNum}`);
+    offsetNum += 5;
+  };
 
-var search = (function() {
-  var div = document.querySelector('.giffs-wrap'),
-      input = document.querySelector('.search-input'),
-      searchBtn = document.querySelector('.search-button'),
-      moreBtn = document.querySelector('.more-button'),
-      offset = 0;
+  const copyLink = (target) => {
+    let aux = document.createElement('input');
+    let url = target.getAttribute('href');
+    aux.setAttribute('value', url);
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand('copy');
+    document.body.removeChild(aux);
+  };
 
-  function searchGiffs() {
-    var input = document.querySelector('.search-input').value;
-    if (input === '') return;
-    div.innerHTML = '';
-    moreBtn.classList.add('active');
-    var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20';
-    methods.getData(url);
-  }
-  return {
-    init: function() {
-      searchBtn.addEventListener('click', searchGiffs);
+  window.addEventListener('DOMContentLoaded', getData(`${HOST}trending?${KEY}${LIMIT}`)); //show popular giffs after page load
 
-      input.addEventListener('keydown', function(e) {
-        if (e.keyCode === 13) {
-          searchGiffs();
-        }
-      })
-    }
-  }
-})();
+  input.addEventListener('keydown', ( {key} ) => {
+    if (key === 'Enter') searchGiffs();
+  });
 
-var showMore = (function() {
-  var moreBtn = document.querySelector('.more-button');
-  var offset = 0;
-  return {
-    init: function() {
-      moreBtn.addEventListener('click', function() {
-        var input = document.querySelector('.search-input').value;
-        offset += 5;
-        var url = 'https://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs&limit=20&offset=' + offset;
-        methods.getData(url);
-      })
-    }
-  }
-})();
+  searchBtn.addEventListener('click', searchGiffs);
 
-var copyLink = (function() {
-  var giffsWrap = document.querySelector('.giffs-wrap');
-  giffsWrap.addEventListener('click', function(e) {
-    var target = e.target;
-    if (target.tagName === 'A') {
+  moreBtn.addEventListener('click', showMore);
+
+  div.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
       e.preventDefault();
-      var aux = document.createElement('input');
-      var url = target.getAttribute('href');
-      aux.setAttribute('value', url);
-      document.body.appendChild(aux);
-      aux.select();
-      document.execCommand('copy');
-      document.body.removeChild(aux);
+      copyLink(e.target);
     }
   });
+  
 })();
-
-
-methods.init();
-
-
-
-
-
-
-
-
