@@ -1,4 +1,4 @@
-(function() {
+const methods = (function() {
 
   const HOST = 'https://api.giphy.com/v1/gifs/';
   const KEY = '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs';
@@ -10,6 +10,8 @@
   const input = document.querySelector('.search-input');
   const searchBtn = document.querySelector('.search-button');
   const moreBtn = document.querySelector('.more-button');
+
+  let offsetNum = 0;
 
   const getData = (url) => {
     fetch(url) //замена XHR на fetch
@@ -38,8 +40,7 @@
   };
 
   const showMore = () => {
-    let val = input.value;
-    let offsetNum = 0;
+    let val = input.value;   
     getData(`${HOST}${SEACRH}${val}${KEY}${OFFSET}${LIMIT}${offsetNum}`);
     offsetNum += 5;
   };
