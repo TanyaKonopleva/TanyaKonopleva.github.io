@@ -1,4 +1,4 @@
-const methods = (function() {
+(function() {
 
   const HOST = 'https://api.giphy.com/v1/gifs/';
   const KEY = '&api_key=hklAv9L2KE8cxy1IuDjWtD05bheryIJs';
