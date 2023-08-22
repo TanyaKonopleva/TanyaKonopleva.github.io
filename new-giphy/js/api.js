@@ -2,17 +2,25 @@ import { API_KEY, HOST } from './consts.js';
 
 export class GifsApi {
     async getTrendingGifs(limit, offset) {
-        const url = this._getURL('trending');
-        const response = await fetch(url);
-        const data = await response.json();
-        return data.data;
+        try {
+            const url = this._getURL('trending');
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.data;
+        } catch {
+            // catch the error
+        }
     }
 
     async searchGifs(q) {
-        const url = this._getURL('search', { q });
-        const response = await fetch(url);
-        const data = await response.json();
-        return data.data;
+        try {
+            const url = this._getURL('search', { q });
+            const response = await fetch(url);
+            const data = await response.json();
+            return data.data;
+        } catch {
+            // catch the error
+        }
     }
 
     _getURL(endpoint, params = {}) {
