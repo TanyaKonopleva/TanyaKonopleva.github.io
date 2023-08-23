@@ -14,13 +14,8 @@ export class GifsView {
     renderHTML(gifs) {
         this.clearGifsWrap();
 
-        const html = gifs.map(({ images: { original: { url } } }) => `
-            <div class="giffs-wrap__img">
-              <img src="${url}" alt="giff">
-              <div class="giffs-wrap__overlay">
-                <a href="${url}" class="giffs-wrap__link" title="Copy link"></a>
-              </div>
-              </div>`)
+        const html = gifs
+            .map(({ images: { original: { url } } }) => this._getGifHTML(url)
             .join('');
 
         this.gifsWrap.innerHTML = html;
@@ -41,6 +36,16 @@ export class GifsView {
                 method();
             }
         })
+    }
+
+    _getGifHTML(gifUrl) {
+        return `
+            <div class="giffs-wrap__img">
+              <img src="${gifUrl}" alt="giff">
+              <div class="giffs-wrap__overlay">
+                <a href="${gifUrl}" class="giffs-wrap__link" title="Copy link"></a>
+              </div>
+            </div>`;
     }
 }
 
