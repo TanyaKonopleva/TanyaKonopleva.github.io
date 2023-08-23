@@ -5,8 +5,8 @@ export class GifsApi {
         try {
             const url = this._getURL('trending');
             const response = await fetch(url);
-            const data = await response.json();
-            return data.data;
+            const { data } = await response.json();
+            return data;
         } catch {
             // catch the error
         }
@@ -16,8 +16,8 @@ export class GifsApi {
         try {
             const url = this._getURL('search', { q });
             const response = await fetch(url);
-            const data = await response.json();
-            return data.data;
+            const { data } = await response.json();
+            return data;
         } catch {
             // catch the error
         }
